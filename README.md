@@ -67,7 +67,7 @@ Ancestry reference could be combined: `HEAD~4^2` - 4 parents back and then secon
 #### Git cheatsheet and reference
 Cheatsheet from basic to rebase: [Atlassin Bitbucket](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
-Not covered in cheatsheet:
+Not covered in the cheatsheet:
 - `git tag` - create/delete special commit reference
 - `git show` - show full information about commit (by default the last one)
 - `git log --all` - all flag to show log from all branches in the repository, not only the current one
@@ -97,11 +97,35 @@ Always put newline as last character of the file is a good style. It is possible
 <hr>
 
 ### [Learn Git Branching](https://learngitbranching.js.org/)
+Main: Introduction Sequence
+
+Remote: Push&Pull -- Git Remotes!
 #### :key: Key takeaways
+#### Remote repository
+Remote repositories provide two advantages:
+- backup of your local repository
+- synchronize team work on the same project
+#### Remote branch
+When cloning git creates special branch: <remote repo name>/<branch name>. Usually remote is called origin. This branch work in HEAD detached mode: branch pointer does not move with new commits, only fetching from remote updates branch pointer. Commits in detached mode could be used for experimantal changes.
+#### Remote git commands
+`git fetch` - only updates remote branch to their state at the moment, does not perform changes to local branches
+
+`git pull` - shorthand for two commands `git fetch; git merge remote/branch`
+
+`git pull --rebase` - shorthand for two commands `git fetch; git rebase remote/branch`
+
+`git push` - allowed only after updating state of remote in local repository
 #### :+1: Pros
+Good visualization of git graph to play with:
+- Shows difference between merge and rebase
+- Shows work with remote branches
 #### :-1: Cons
+It does not fully replace practice with real git repositories. You still need to train all commands with real repository.
 #### :bulb: New
+`git rebase` to make project history straightforward.
 #### :gift: Suprising
+git HEAD detached mode for experimenting
 #### :hammer: Useful
+`git checkout -b <branch name> <commit>` creating branch and checking it out at specific commit
 <hr>
 </details>
