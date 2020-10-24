@@ -3,6 +3,11 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 ## Stage 0
 <details>
 <summary>00. Git Basics</summary>
+
+### 00. Git Basics content
+- [Udacity course: "Version Control with Git"](README.md#Udacity-Version-Control-with-Git)
+- [Visual interactive course: Learn Git Branching (Main 1st section, Remote 1st section)](README.md#Learn-Git-Branching)
+
 <hr>
 
 ### [Udacity: Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123)
@@ -94,6 +99,8 @@ Navigation in unix command line pager program: **less**
 Commit message body describes why change was done. To add it leave a blank line after commit message in editor.
 
 Always put newline as last character of the file is a good style. It is possible to add this into preferences of a code editor.
+
+[Back to this task content](README.md#00.-Git-Basics-content)
 <hr>
 
 ### [Learn Git Branching](https://learngitbranching.js.org/)
@@ -127,5 +134,7 @@ It does not fully replace practice with real git repositories. You still need to
 git HEAD detached mode for experimenting
 #### :hammer: Useful
 `git checkout -b <branch name> <commit>` creating branch and checking it out at specific commit
+
+[Back to this task content](README.md#00.-Git-Basics-content)
 <hr>
 </details>
