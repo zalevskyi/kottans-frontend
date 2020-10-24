@@ -5,8 +5,8 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 <summary>00. Git Basics</summary>
 
 ### 00. Git Basics content
-- [Udacity course: "Version Control with Git"](README.md#Udacity-Version-Control-with-Git)
-- [Visual interactive course: Learn Git Branching (Main 1st section, Remote 1st section)](README.md#Learn-Git-Branching)
+- [Udacity course: "Version Control with Git"](README.md#udacity-version-control-with-git)
+- [Visual interactive course: Learn Git Branching (Main 1st section, Remote 1st section)](README.md#learn-git-branching)
 
 <hr>
 
@@ -100,7 +100,7 @@ Commit message body describes why change was done. To add it leave a blank line 
 
 Always put newline as last character of the file is a good style. It is possible to add this into preferences of a code editor.
 
-[Back to this task content](README.md#00.-Git-Basics-content)
+[:arrow_up_small: Back to this task content](README.md#00-git-basics-content)
 <hr>
 
 ### [Learn Git Branching](https://learngitbranching.js.org/)
@@ -113,7 +113,7 @@ Remote repositories provide two advantages:
 - backup of your local repository
 - synchronize team work on the same project
 #### Remote branch
-When cloning git creates special branch: <remote repo name>/<branch name>. Usually remote is called origin. This branch work in HEAD detached mode: branch pointer does not move with new commits, only fetching from remote updates branch pointer. Commits in detached mode could be used for experimantal changes.
+When cloning git creates special branch: `<remote repo name>/<branch name>`. Usually remote is called origin. This branch work in HEAD detached mode: branch pointer does not move with new commits, only fetching from remote updates branch pointer. Commits in detached mode could be used for experimantal changes.
 #### Remote git commands
 `git fetch` - only updates remote branch to their state at the moment, does not perform changes to local branches
 
@@ -135,6 +135,6 @@ git HEAD detached mode for experimenting
 #### :hammer: Useful
 `git checkout -b <branch name> <commit>` creating branch and checking it out at specific commit
 
-[Back to this task content](README.md#00.-Git-Basics-content)
+[:arrow_up_small: Back to this task content](README.md#00-git-basics-content)
 <hr>
 </details>
