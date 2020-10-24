@@ -95,4 +95,13 @@ Commit message body describes why change was done. To add it leave a blank line 
 
 Always put newline as last character of the file is a good style. It is possible to add this into preferences of a code editor.
 <hr>
+
+### [Learn Git Branching](https://learngitbranching.js.org/)
+#### :key: Key takeaways
+#### :+1: Pros
+#### :-1: Cons
+#### :bulb: New
+#### :gift: Suprising
+#### :hammer: Useful
+<hr>
 </details>
