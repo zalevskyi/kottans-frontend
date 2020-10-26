@@ -1,16 +1,21 @@
 # Kottans Front-End 2020/2021 reflections
 Repository for my personal reflections, code and notes about [Front-End Course](https://github.com/kottans/frontend) (version 2020-2021) provided by [Kottans community](https://kottans.org/) :cat2:<hr>
-## Stage 0
+# Stage 0
 <details>
 <summary>00. Git Basics</summary>
 
-### 00. Git Basics content
+## Git Basics
 - [Udacity course: "Version Control with Git"](README.md#udacity-version-control-with-git)
 - [Visual interactive course: Learn Git Branching (Main 1st section, Remote 1st section)](README.md#learn-git-branching)
 
 <hr>
 
 ### [Udacity: Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123)
+<details>
+<summary>Screenshots</summary>
+![Udacity Version control with Git](task_git_basics/udacity-version-control-with-git.jpg)
+</details>
+
 #### :key: Key takeaways
 **VSC** Version control system is the same as **SCM** Source code manager.
 #### Why to use version control system?
@@ -25,7 +30,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 #### Cetralized vs. Distributed VCS
 Centralized VCS has single place to store all information (Subversion for example)
 
-Distributed VCS each persono has full project information on its own computer (Git, Mercurial).
+Distributed VCS provides each user with full project information on its own computer (Git, Mercurial).
 
 Distributed VCS advantages:
 - fast to move between versions (all data is local, it is done by copying files from repository to working tree)
@@ -100,13 +105,19 @@ Commit message body describes why change was done. To add it leave a blank line 
 
 Always put newline as last character of the file is a good style. It is possible to add this into preferences of a code editor.
 
-[:arrow_up_small: Back to this task content](README.md#00-git-basics-content)
+[:arrow_up_small: Back to this task content](README.md#git-basics)
 <hr>
 
 ### [Learn Git Branching](https://learngitbranching.js.org/)
 Main: Introduction Sequence
 
 Remote: Push&Pull -- Git Remotes!
+<details>
+<summary>Screenshots</summary>
+![Learn Git branching Introduction](task_git_basics/learninggitbranching-main-introduction-sequence.jpg)
+![Learn Git branching Push and Pull](task_git_basics/learninggitbranching-remote-push-and-pull.jpg)
+</details>
+
 #### :key: Key takeaways
 #### Remote repository
 Remote repositories provide two advantages:
@@ -135,6 +146,6 @@ git HEAD detached mode for experimenting
 #### :hammer: Useful
 `git checkout -b <branch name> <commit>` creating branch and checking it out at specific commit
 
-[:arrow_up_small: Back to this task content](README.md#00-git-basics-content)
+[:arrow_up_small: Back to this task content](README.md#git-basics)
 <hr>
 </details>
