@@ -13,6 +13,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 ### [Udacity: Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123)
 <details>
 <summary>Screenshots</summary>
+
 ![Udacity Version control with Git](task_git_basics/udacity-version-control-with-git.jpg)
 </details>
 
@@ -114,6 +115,7 @@ Main: Introduction Sequence
 Remote: Push&Pull -- Git Remotes!
 <details>
 <summary>Screenshots</summary>
+
 ![Learn Git branching Introduction](task_git_basics/learninggitbranching-main-introduction-sequence.jpg)
 ![Learn Git branching Push and Pull](task_git_basics/learninggitbranching-remote-push-and-pull.jpg)
 </details>
