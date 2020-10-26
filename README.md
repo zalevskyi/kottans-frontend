@@ -157,7 +157,7 @@ git HEAD detached mode for experimenting
 
 ## Linux CLI, and HTTP
 - [Linux Survival (4 modules)](README.md#linux-survival)
-
+- [HTTP: The Protocol Every Web Developer Must Know - Part 1](README.md#http-the-protocol-every-web-developer-must-know-part-1)
 <hr>
 
 ### [Linux Survival](https://linuxsurvival.com/)
@@ -176,7 +176,7 @@ git HEAD detached mode for experimenting
 
 #### :key: Key takeaways
 #### Command #1 to know what do to
-`man [-k] <keyword>`:
+`man [-k] <keyword>`
 - without `-k` is help about specific command
 - with `-k` is a search around all manual for specific keyword
 #### Directories shortcuts
@@ -184,7 +184,7 @@ git HEAD detached mode for experimenting
 - `.` - current directory
 - `..` - directory one level up
 #### File permissions
-9 bits:
+9 bits (3 bits permissions * 3 levels of users)
 - levels: user - group - other (ugo)
 - permissions: read - write - execute (rwx)
 `chmod ugo+rwx file` - letters for users level, add/remove (+/-), letters of specific rights
@@ -210,4 +210,58 @@ Send text to other file: `>` by creating new one, `>>` appending to existing one
 [:arrow_up_small: Back to this task content](README.md#linux-cli-and-http)
 
 <hr>
+
+### [HTTP: The Protocol Every Web Developer Must Know - Part 1](https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+
+#### :key: Key takeaways
+#### HTTP
+- text based communication protocol not tied to specific system requirements, a way of interaction agreed in headers of messages
+- stateless, it is initiated by request and ended with responce(s), state of connection/communication is not saved between requests
+#### Message structure
+`<start line>` request-line or status-line
+
+`<message header(s)>` a list of `field-name : field-value` pairs to agree on communication parameters
+
+`<message body>` a content itself
+#### Request-line
+`Method URI HTTP-Version`
+
+Most common methods (actions that client requests from server):
+- GET - fetch an existing resource
+- POST - create a new resource
+- PUT - update an existing resource
+- DELETE - delete an existing resource
+#### Status-line
+`HTTP-Version Status-Code Reason-Pharase`
+
+Groups of status-code:
+- 1xx - Information Messages
+- 2xx - Successful
+- 3xx - Redirection
+- 4xx - Client Error
+- 5xx - Server Error
+#### Headers classification
+- general headers - used by both request and respond messages
+- request specific headers
+- respond specific headers
+- entity (message body) specific headers
+#### :+1: Pros
+None
+#### :-1: Cons
+Messy article that overcomplicate things. It tries to be for beginners and at the same time to give specific details.
+
+It is very badly structured: client request methods and server responce statuses explained before explaining message structure overall; headers listed before explaining before request-line and status-line
+
+It is outdated in terms of tools and framework specific (publication date is 2013-04-08)
+#### :bulb: New
+Nothing
+#### :gift: Suprising
+Nothing
+#### :hammer: Useful
+Nothing
+
+[:arrow_up_small: Back to this task content](README.md#linux-cli-and-http)
+
+<hr>
+
 </details>
