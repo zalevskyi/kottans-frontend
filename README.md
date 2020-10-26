@@ -151,3 +151,63 @@ git HEAD detached mode for experimenting
 [:arrow_up_small: Back to this task content](README.md#git-basics)
 <hr>
 </details>
+<details>
+<summary>01. Linux CLI and Networking</summary>
+<hr>
+
+## Linux CLI, and HTTP
+- [Linux Survival (4 modules)](README.md#linux-survival)
+
+<hr>
+
+### [Linux Survival](https://linuxsurvival.com/)
+<details>
+<summary>Screenshots</summary>
+
+![Linux module 1 - quiz](task_linux_cli/linux-1-quiz.jpg)
+![Linux module 1 - end](task_linux_cli/linux-1-end.jpg)
+![Linux module 2 - quiz](task_linux_cli/linux-2-quiz.jpg)
+![Linux module 2 - end](task_linux_cli/linux-2-end.jpg)
+![Linux module 3 - quiz](task_linux_cli/linux-3-quiz.jpg)
+![Linux module 3 - end](task_linux_cli/linux-3-end.jpg)
+![Linux module 4 - quiz](task_linux_cli/linux-4-quiz.jpg)
+![Linux module 4 - end](task_linux_cli/linux-4-end.jpg)
+</details>
+
+#### :key: Key takeaways
+#### Command #1 to know what do to
+`man [-k] <keyword>`:
+- without `-k` is help about specific command
+- with `-k` is a search around all manual for specific keyword
+#### Directories shortcuts
+- `~user` - home directory of specific user, for current user just `~` could be used
+- `.` - current directory
+- `..` - directory one level up
+#### File permissions
+9 bits:
+- levels: user - group - other (ugo)
+- permissions: read - write - execute (rwx)
+`chmod ugo+rwx file` - letters for users level, add/remove (+/-), letters of specific rights
+#### :+1: Pros
+Covered essential things to start working with Linux command line and ways to find more information later in practice.
+#### :-1: Cons
+Outdated content regarding work with printers. Nowdays it would be far more relevant content with command line tools to work with internet like: `wget`
+
+Not explaind that `more` is a pager programm and there is more modern `less` pager.
+
+Fuzzy explanation about `-r` flag for working with directories as with a whole tree, not as recursive operation
+#### :bulb: New
+Limitation of asigning file permissions to only 1 group, thus need for additional technics for more sophisticated file access control (users from different groups)
+#### :gift: Suprising
+Single tree aproach in Linux with mounting physical disks as ordinal directories in the tree.
+
+Multi-user approach from the start
+#### :hammer: Useful
+Pipeline of one program results into other: for example `ps aux | grep <command>` list processes from all users that are executing now and send it to grep for filtering only lines with specific command.
+
+Send text to other file: `>` by creating new one, `>>` appending to existing one if there is one. For example `cat file1.txt file2.txt >> summary.txt`
+
+[:arrow_up_small: Back to this task content](README.md#linux-cli-and-http)
+
+<hr>
+</details>
