@@ -157,7 +157,8 @@ git HEAD detached mode for experimenting
 
 ## Linux CLI, and HTTP
 - [Linux Survival (4 modules)](README.md#linux-survival)
-- [HTTP: The Protocol Every Web Developer Must Know - Part 1](README.md#http-the-protocol-every-web-developer-must-know-part-1)
+- [HTTP: The Protocol Every Web Developer Must Know - Part 1](README.md#http-the-protocol-every-web-developer-must-know-part---1)
+- [HTTP: The Protocol Every Web Developer Must Know - Part 2](README.md#http-the-protocol-every-web-developer-must-know-part---2)
 <hr>
 
 ### [Linux Survival](https://linuxsurvival.com/)
@@ -201,7 +202,7 @@ Limitation of asigning file permissions to only 1 group, thus need for additiona
 #### :gift: Suprising
 Single tree aproach in Linux with mounting physical disks as ordinal directories in the tree.
 
-Multi-user approach from the start
+Multi-user approach in Linux from the start
 #### :hammer: Useful
 Pipeline of one program results into other: for example `ps aux | grep <command>` list processes from all users that are executing now and send it to grep for filtering only lines with specific command.
 
@@ -264,4 +265,56 @@ Nothing
 
 <hr>
 
+### [HTTP: The Protocol Every Web Developer Must Know - Part 2](https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-2--net-31155)
+
+#### :key: Key takeaways
+#### HTTP connection
+Internet layer:
+- IP - is protocol for connection between devices
+
+Transport layer:
+- TCP - is transfering data protocol over IP
+
+Application layer:
+- HTTP - protocol of how application communicate over TCP
+- TLS - Transport layer security protocol
+- HTTPS - protocol of how applications communicate over TCP using TLS
+
+*Persistent connection* - to avoid establishing TCP/IP connection for each HTTP request it is kept alive until client sends request with header: `Connection: close`. It is default in HTTP/1.1
+
+*Parallel connections* - to minimize network delays client could establish multiple connection to server, separately for each resource to be downloaded
+#### Identification and Authentication
+Ways a server can collect identification information:
+- request headers
+- client IP
+- fat URLs (modifing URL for each user)
+- cookies - session data as set of key=value pairs
+#### HTTP Cache
+To avoide same work done twice a cache of data is used
+
+Cache storing:
+- private - user specific data is stored on client machine
+- public - to serve multiple users frequently requested data is stored on proxy server between clients and original server
+
+Expiration of resource is controled by `Cache-Control` header that could be both used for request and respond.
+
+After expiration client can request *server revalidation* of chached resource.
+#### :+1: Pros
+Good explanation of connection as laying one protocol over other.
+
+Good explanation about avoiding double work with persistent connection and using cache.
+#### :-1: Cons
+Messy article of very basic and more complicated things.
+#### :bulb: New
+Understanding that TSL is between TCP and HTTPs
+
+Client can open several connection to the same server to minimize network delays
+#### :gift: Suprising
+HTTP connection is not closed after sending response by default
+#### :hammer: Useful
+Ways cache could be controled by both client and server using `Cache-Control` header
+
+[:arrow_up_small: Back to this task content](README.md#linux-cli-and-http)
+
+<hr>
 </details>
