@@ -5,8 +5,8 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 <summary>00. Git Basics</summary>
 
 ## Git Basics
-- [Udacity course: "Version Control with Git"](README.md#udacity-version-control-with-git)
-- [Visual interactive course: Learn Git Branching (Main 1st section, Remote 1st section)](README.md#learn-git-branching)
+- [Udacity course: Version Control with Git](#udacity-version-control-with-git)
+- [Visual interactive course: Learn Git Branching (Main 1st section, Remote 1st section)](#learn-git-branching---first-sections)
 
 <hr>
 
@@ -106,10 +106,10 @@ Commit message body describes why change was done. To add it leave a blank line 
 
 Always put newline as last character of the file is a good style. It is possible to add this into preferences of a code editor.
 
-[:arrow_up_small: Back to this task content](README.md#git-basics)
+[:arrow_up_small: Back to this task content](#git-basics)
 <hr>
 
-### [Learn Git Branching](https://learngitbranching.js.org/)
+### [Learn Git Branching - first sections](https://learngitbranching.js.org/)
 Main: Introduction Sequence
 
 Remote: Push&Pull -- Git Remotes!
@@ -148,7 +148,7 @@ git HEAD detached mode for experimenting
 #### :hammer: Useful
 `git checkout -b <branch name> <commit>` creating branch and checking it out at specific commit
 
-[:arrow_up_small: Back to this task content](README.md#git-basics)
+[:arrow_up_small: Back to this task content](#git-basics)
 <hr>
 </details>
 <details>
@@ -156,9 +156,9 @@ git HEAD detached mode for experimenting
 <hr>
 
 ## Linux CLI, and HTTP
-- [Linux Survival (4 modules)](README.md#linux-survival)
-- [HTTP: The Protocol Every Web Developer Must Know - Part 1](README.md#http-the-protocol-every-web-developer-must-know-part---1)
-- [HTTP: The Protocol Every Web Developer Must Know - Part 2](README.md#http-the-protocol-every-web-developer-must-know-part---2)
+- [Linux Survival (4 modules)](#linux-survival)
+- [HTTP: The Protocol Every Web Developer Must Know - Part 1](#http-the-protocol-every-web-developer-must-know---part-1)
+- [HTTP: The Protocol Every Web Developer Must Know - Part 2](#http-the-protocol-every-web-developer-must-know---part-2)
 <hr>
 
 ### [Linux Survival](https://linuxsurvival.com/)
@@ -208,7 +208,7 @@ Pipeline of one program results into other: for example `ps aux | grep <command>
 
 Send text to other file: `>` by creating new one, `>>` appending to existing one if there is one. For example `cat file1.txt file2.txt >> summary.txt`
 
-[:arrow_up_small: Back to this task content](README.md#linux-cli-and-http)
+[:arrow_up_small: Back to this task content](#linux-cli-and-http)
 
 <hr>
 
@@ -261,7 +261,7 @@ Nothing
 #### :hammer: Useful
 Nothing
 
-[:arrow_up_small: Back to this task content](README.md#linux-cli-and-http)
+[:arrow_up_small: Back to this task content](#linux-cli-and-http)
 
 <hr>
 
@@ -305,6 +305,8 @@ Good explanation of connection as laying one protocol over other.
 Good explanation about avoiding double work with persistent connection and using cache.
 #### :-1: Cons
 Messy article of very basic and more complicated things.
+
+Not clear how up to date is this article about security and authentication.
 #### :bulb: New
 Understanding that TSL is between TCP and HTTPs
 
@@ -314,7 +316,54 @@ HTTP connection is not closed after sending response by default
 #### :hammer: Useful
 Ways cache could be controled by both client and server using `Cache-Control` header
 
-[:arrow_up_small: Back to this task content](README.md#linux-cli-and-http)
+[:arrow_up_small: Back to this task content](#linux-cli-and-http)
+
+<hr>
+</details>
+
+<details>
+<summary>02. GitHub and Collaboration</summary>
+<hr>
+
+## Git Collaboration
+- [Udacity course: GitHub & Collaboration](#github-&-collaboration)
+- [Visual interactive course: Learn Git Branching](#learn-git-branching)
+
+<hr>
+
+### [GitHub & Collaboration](https://classroom.udacity.com/courses/ud456)
+<details>
+<summary>Screenshots</summary>
+
+![]()
+</details>
+
+#### :key: Key takeaways
+#### :+1: Pros
+#### :-1: Cons
+#### :bulb: New
+#### :gift: Suprising
+#### :hammer: Useful
+
+[:arrow_up_small: Back to this task content](#git-collaboration)
+
+<hr>
+
+### [Learn Git Branching](https://learngitbranching.js.org/)
+<details>
+<summary>Screenshots</summary>
+
+![]()
+</details>
+
+#### :key: Key takeaways
+#### :+1: Pros
+#### :-1: Cons
+#### :bulb: New
+#### :gift: Suprising
+#### :hammer: Useful
+
+[:arrow_up_small: Back to this task content](#git-collaboration)
 
 <hr>
 </details>
