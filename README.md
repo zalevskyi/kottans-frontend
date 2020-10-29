@@ -390,15 +390,37 @@ Commonly used, but not required, naming for remotes:
 <details>
 <summary>Screenshots</summary>
 
-![]()
+![Learn git branching - Main](task_git_collaboration/learn-git-branching-main.jpg)
+![Learn git branching - Remote](task_git_collaboration/learn-git-branching-remote.jpg)
 </details>
 
 #### :key: Key takeaways
+#### HEAD pointer
+*HEAD* - points to the most recent commit which is reflected in the working tree (the one that is currently checkouted). Checking out specific commit transfers HEAD in detached state, not pointing to any branch. This is usefull for experimenting with out saving to any branch.
+#### Moving branches
+`git branch -f <branch name> <commit>` - forcefully moves branch pointer to specific commit
+
+`git rebase -i <commit refference>` - takes all unique commits from current branch and moves them straighline starting from specified commit (could be other branch name)
+#### Remotes tracking and synchronizing
+By default there are tracking branches with the same name as local and remote: remote *main*, local *main*, tracking branch `<remote>/main`.
+
+`git branch -u <remote>/<branch> <some local branch>` - arbitrary sets local branch with any name to track remote one
+
+`git push <remote> <place>` - pushes the same name branch from local to remote, there is no need to checkout local branch
+
+`git push <remote> <source>:<destination>` - pushes new commits upto source (any commit reference) to remote starting from destination commit
 #### :+1: Pros
+Great visualization and explanation of git commands
 #### :-1: Cons
+You still need to practice with real repositories to get skills
 #### :bulb: New
+`git cherry-pick <commit> ... <commit>` - very straightforward and flexible way to manage commits on the branch
 #### :gift: Suprising
+Deleting branch in remote repository with specifying *nothing* as source for push: `git push <remote> :<destination>` (destination is a branch in remote repository)
 #### :hammer: Useful
+Comparison of *merge* and *rebase*:
+- `git rebase` - let you have straight line trach of changes
+- `git merge` - let you preserve historical order how changeds where made
 
 [:arrow_up_small: Back to this task content](#git-collaboration)
 
