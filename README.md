@@ -326,7 +326,7 @@ Ways cache could be controled by both client and server using `Cache-Control` he
 <hr>
 
 ## Git Collaboration
-- [Udacity course: GitHub & Collaboration](#github-&-collaboration)
+- [Udacity course: GitHub & Collaboration](#github--collaboration)
 - [Visual interactive course: Learn Git Branching](#learn-git-branching)
 
 <hr>
@@ -335,15 +335,52 @@ Ways cache could be controled by both client and server using `Cache-Control` he
 <details>
 <summary>Screenshots</summary>
 
-![]()
+![Udacity GitHub and Collaboration](task_git_collaboration/udacity-github-and-collaboration.jpg)
 </details>
 
 #### :key: Key takeaways
+#### Remote repositories
+There could be multiple remote repositories:
+- direct collaboration between developers omiting major project repository, used for work in progress cooperation before commits into major repository
+- separate resositories for source code maintaining and deploying
+
+*Tracking branch* - local branch named `<remote>/<branch>` is used to reflect state of remote branch at the moment of the last synchronization. It is in detached HEAD mode - not updated locally.
+
+`git remote` for managing remote repositories links
+
+`git remote add <shortname> <repository path>`
+
+`git push <remote> <local branch>` - uploads new commits from local branch to remote repository and fast-forward merge
+
+`git push -f` (*--force*) - uploads commits from local branch and replaces on remote, if local and remote branches have diverged and fast-forard merge is not possible.
+
+`git fetch <remote> <branch>` - updates tracking branch with new commits from remote
+
+`git pull <remote> <branch>` - updates tracking branch with new commits from remote and merges them into local branch
+#### Filtering Git log
+`git log --author=` - filters git log by commit author
+
+`git log --grep=` - filter git log by string containing in commit message and its body, works the same as grep command in linux.
+#### Collaboration workflow
+`CONTRIBUTING.md` file contains all rulls and requirements for contributing into a project
+
+*Issues* are used to discuss need of some changes into project
+
+*Topic branch* is a git branch in a fork to work on specific code update.
 #### :+1: Pros
+Solid explanation of workflow with remotes repositories and collaborating via pull requests.
 #### :-1: Cons
+Course is available only via direct link and is not listed in Udacity catalog. Udacity can treat it as outdated or not relevant.
 #### :bulb: New
+How powerfull is `git rebase -i` (interactive) for changing repository (editing, deleting, joining, reodering commits)
 #### :gift: Suprising
+Updating branch used for pull request will update automatically pull request. It is very logically and convinient for collaboration.
 #### :hammer: Useful
+Commonly used, but not required, naming for remotes:
+- *origin* - your own remote repository
+- *upstream* - major source repository of a project
+
+`git rebase` useage caveat: :no_entry: Don't rebase public history, it will break track of past commits in other people repositories and theirs work will not be tied to newly rebased repository
 
 [:arrow_up_small: Back to this task content](#git-collaboration)
 
