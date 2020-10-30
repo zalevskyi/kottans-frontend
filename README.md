@@ -1,8 +1,24 @@
 # Kottans Front-End 2020/2021 reflections
 Repository for my personal reflections, code and notes about [Front-End Course](https://github.com/kottans/frontend) (version 2020-2021) provided by [Kottans community](https://kottans.org/) :cat2:<hr>
 # Stage 0
-<details>
-<summary>00. Git Basics</summary>
+
+`00` [Git Basics](#git-basics)
+- [Udacity course: Version Control with Git](#udacity-version-control-with-git)
+- [Visual interactive course: Learn Git Branching (Main 1st section, Remote 1st section)](#learn-git-branching---first-sections)
+
+`01` [Linux CLI, and HTTP](#linux-cli-and-http)
+- [Linux Survival (4 modules)](#linux-survival)
+- [HTTP: The Protocol Every Web Developer Must Know - Part 1](#http-the-protocol-every-web-developer-must-know---part-1)
+- [HTTP: The Protocol Every Web Developer Must Know - Part 2](#http-the-protocol-every-web-developer-must-know---part-2)
+
+`02` [Git Collaboration](#git-collaboration)
+- [Udacity course: GitHub & Collaboration](#github--collaboration)
+- [Visual interactive course: Learn Git Branching](#learn-git-branching)
+
+`03` [Intro to HTML and CSS](#intro-to-html-and-css)
+- [Udacity course: Intro to HTML and CSS](#udacity-course-intro-to-html-and-css)
+
+<hr>
 
 ## Git Basics
 - [Udacity course: Version Control with Git](#udacity-version-control-with-git)
@@ -107,6 +123,8 @@ Commit message body describes why change was done. To add it leave a blank line 
 Always put newline as last character of the file is a good style. It is possible to add this into preferences of a code editor.
 
 [:arrow_up_small: Back to this task content](#git-basics)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
 <hr>
 
 ### [Learn Git Branching - first sections](https://learngitbranching.js.org/)
@@ -149,10 +167,8 @@ git HEAD detached mode for experimenting
 `git checkout -b <branch name> <commit>` creating branch and checking it out at specific commit
 
 [:arrow_up_small: Back to this task content](#git-basics)
-<hr>
-</details>
-<details>
-<summary>01. Linux CLI and Networking</summary>
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
 <hr>
 
 ## Linux CLI, and HTTP
@@ -210,6 +226,8 @@ Send text to other file: `>` by creating new one, `>>` appending to existing one
 
 [:arrow_up_small: Back to this task content](#linux-cli-and-http)
 
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
 <hr>
 
 ### [HTTP: The Protocol Every Web Developer Must Know - Part 1](https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
@@ -262,6 +280,8 @@ Nothing
 Nothing
 
 [:arrow_up_small: Back to this task content](#linux-cli-and-http)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
 
 <hr>
 
@@ -318,11 +338,8 @@ Ways cache could be controled by both client and server using `Cache-Control` he
 
 [:arrow_up_small: Back to this task content](#linux-cli-and-http)
 
-<hr>
-</details>
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
 
-<details>
-<summary>02. GitHub and Collaboration</summary>
 <hr>
 
 ## Git Collaboration
@@ -384,6 +401,8 @@ Commonly used, but not required, naming for remotes:
 
 [:arrow_up_small: Back to this task content](#git-collaboration)
 
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
 <hr>
 
 ### [Learn Git Branching](https://learngitbranching.js.org/)
@@ -424,5 +443,42 @@ Comparison of *merge* and *rebase*:
 
 [:arrow_up_small: Back to this task content](#git-collaboration)
 
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
 <hr>
+
+## Intro to HTML and CSS
+- [Udacity course: Intro to HTML and CSS](#udacity-course-intro-to-html-and-css)
+
+<hr>
+
+### [Udacity course: Intro to HTML and CSS](https://www.udacity.com/course/intro-to-html-and-css--ud001)
+<details>
+<summary>Screenshots</summary>
+
+![Udacity Intro to HTML and CSS](task_html_css_intro/udacity-intro-to-html-and-css.jpg)
 </details>
+
+#### :key: Key takeaways
+None
+#### :+1: Pros
+None
+#### :-1: Cons
+Content quality of this course is not consistent. It give very rough understanding of HTML and CSS accompanied with sporadic practice. Tasks don't any solid understanding of what you are doing.
+
+It is better not to spend time for this course even for those who know nothing about HTML and CSS.
+#### :bulb: New
+None
+#### :gift: Suprising
+None
+#### :hammer: Useful
+Links to great references:
+- [Mozilla HTML reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- [Mozilla CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+- [CSS Tricks - Almanac](https://css-tricks.com/almanac/)
+
+[:arrow_up_small: Back to this task content](#intro-to-html-and-css)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
