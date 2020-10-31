@@ -17,6 +17,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 
 `03` [Intro to HTML and CSS](#intro-to-html-and-css)
 - [Udacity course: Intro to HTML and CSS](#udacity-course-intro-to-html-and-css)
+- [codecademy: Learn HTML](#codecademy-learn-html)
 
 <hr>
 
@@ -449,6 +450,7 @@ Comparison of *merge* and *rebase*:
 
 ## Intro to HTML and CSS
 - [Udacity course: Intro to HTML and CSS](#udacity-course-intro-to-html-and-css)
+- [codecademy: Learn HTML](#codecademy-learn-html)
 
 <hr>
 
@@ -464,7 +466,7 @@ None
 #### :+1: Pros
 None
 #### :-1: Cons
-Content quality of this course is not consistent. It give very rough understanding of HTML and CSS accompanied with sporadic practice. Tasks don't any solid understanding of what you are doing.
+Content quality of this course is not consistent. It gives very rough understanding of HTML and CSS, accompanied with sporadic practice. Tasks don't give any solid understanding of what you are doing.
 
 It is better not to spend time for this course even for those who know nothing about HTML and CSS.
 #### :bulb: New
@@ -476,6 +478,53 @@ Links to great references:
 - [Mozilla HTML reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 - [Mozilla CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 - [CSS Tricks - Almanac](https://css-tricks.com/almanac/)
+
+[:arrow_up_small: Back to this task content](#intro-to-html-and-css)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [codecademy: Learn HTML](https://www.codecademy.com/learn/learn-html)
+<details>
+<summary>Screenshots</summary>
+
+![codecademy Learn HTML](task_html_css_intro/codecademy-learn-html-completed.jpg)
+</details>
+
+#### :key: Key takeaways
+**Metadata** - information about the page that is not displayed directly on the page
+
+HTML for structure and semantics.
+
+Non semantic elements:
+- `<div>` - block element
+- `<span>` - inline element
+
+Semantic elements:
+- `<main>`
+- `<header>`
+- `<footer>`
+- `<nav>`
+- `<aside>`
+- `<section>`
+- `<article>`
+#### :+1: Pros
+Neat and clear indroduction into HTML. All basic questions are covered with practice even in free version.
+#### :-1: Cons
+None
+#### :bulb: New
+`<datalist>` element for `<input type="text">` - to populate with options list
+
+*pattern* attribute for `<input type="text>` to validate input on client-side
+#### :gift: Suprising
+Alternative text of an image for SEO.
+#### :hammer: Useful
+Cheatsheets:
+- [Elements and structure](https://www.codecademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet)
+- [Tables](https://www.codecademy.com/learn/learn-html/modules/learn-html-tables/cheatsheet)
+- [Forms](https://www.codecademy.com/learn/learn-html/modules/learn-html-forms/cheatsheet)
+- [Semantic HTML](https://www.codecademy.com/learn/learn-html/modules/learn-semantic-html/cheatsheet)
 
 [:arrow_up_small: Back to this task content](#intro-to-html-and-css)
 
