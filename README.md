@@ -18,6 +18,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 `03` [Intro to HTML and CSS](#intro-to-html-and-css)
 - [Udacity course: Intro to HTML and CSS](#udacity-course-intro-to-html-and-css)
 - [codecademy: Learn HTML](#codecademy-learn-html)
+- [codecademy: Learn CSS](#codecademy-learn-css)
 
 <hr>
 
@@ -451,6 +452,7 @@ Comparison of *merge* and *rebase*:
 ## Intro to HTML and CSS
 - [Udacity course: Intro to HTML and CSS](#udacity-course-intro-to-html-and-css)
 - [codecademy: Learn HTML](#codecademy-learn-html)
+- [codecademy: Learn CSS](#codecademy-learn-css)
 
 <hr>
 
@@ -525,6 +527,159 @@ Cheatsheets:
 - [Tables](https://www.codecademy.com/learn/learn-html/modules/learn-html-tables/cheatsheet)
 - [Forms](https://www.codecademy.com/learn/learn-html/modules/learn-html-forms/cheatsheet)
 - [Semantic HTML](https://www.codecademy.com/learn/learn-html/modules/learn-semantic-html/cheatsheet)
+
+[:arrow_up_small: Back to this task content](#intro-to-html-and-css)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [codecademy: Learn CSS](https://www.codecademy.com/learn/learn-css)
+<details>
+<summary>Screenshots</summary>
+
+![codecademy Learn CSS](task_html_css_intro/codecademy-learn-css-completed.jpg)
+</details>
+
+#### :key: Key takeaways
+#### Box model
+<details><summary>Visual box model</summary>
+
+![Box model](https://content.codecademy.com/courses/freelance-1/unit-4/diagram-boxmodel.svg)
+</details>
+
+`display:`
+- *inline*
+- *block*
+- *inline-block* (inline, but have size, for example image)
+- *flex*
+- *inline-flex*
+- *grid*
+- *inline-grid*
+
+`position:`
+- *static* - default, according to HTML flow
+- *relative* - relative to element's own static position
+- *absolute* - relative to parent element position, ignored in HTML flow, don't have there own static position
+- *fixed* - relative to screen
+
+`z-index` - oder of overlapping elements, larger number goes on top
+
+Block element size properties:
+- `min-width`, `width`, `max-width`
+- `min-height`, `heigth`, `max-height`
+
+`overflow:` - block element behavior with content exceeding size of element: *visible* (default), *hidden*, *sroll*, *auto*
+
+`float` and `clear` properties defines how element floats within parent element and how should behave when it bumps into other another sibling element
+
+#### Colors
+- named
+- RGB hex
+- functions: `rbg()`, `rgba()`, `hsl()`, `hsla()` - *alpha* is opacity level from 0 (transperant) to 1 (fully filled)
+#### Fonts
+Font types:
+- *serif* - with strokes
+- *san-serif* - with-out strokes, more neat at low-resolution screens
+- *monospace* - all letters has same size
+
+Spacing properties:
+- `word-spacing`
+- `letter-spacing`
+- `line-height` - it is sum of font size and leading
+
+Font weight
+
+Numeric values from 100 to 900.
+- *light* - 300
+- *default* - 400
+- *bold* - 700
+#### Flexbox (flexible box layout)
+Flex containers respond to changes in screen sizes. Flexboxes can be nested.
+
+Flex containers properties:
+- `justify-content` (align columns)
+- `align-content` (align rows)
+- `align-items` (align elements in ther rows)
+- `flex-flow` unites two properties: `flex-wrap` and `flex-direction`
+
+Flex items properties:
+- `flex` unites three properties
+  - `flex-grow` - index of increase
+  - `flex-shrink` - index of decrease
+  - `flex-basis` - base size
+
+#### CSS Grid
+Grid is used to layout the whole page.
+
+Grid containers properties:
+- `grid template: [rows] / [columns]`. Can be used gunctions repeat() and minmax(). Unites two properties:
+  - `grid-template-rows`
+  - `grid-template-columns`
+- `grid-temaplate-areas: "..."` used to create grid with shorthand named sections 
+- `grid-gap` unites two properties:
+  - `grid-row-gap`
+  - `grid-column-gap`
+- `justify-items` (position elements in their columns)
+- `justify-content` (position columns itself)
+- `align-items`
+- `align-content`
+
+Implicit grid behavior for adding items over grid: items will fill up rows adding new rows as necessary with size of new rows just enough for content. Explicit grid grow properties:
+- `grid-auto-flow` (rows or columns)
+- `grid-auto-rows`
+- `grid-auto-columns`
+
+Grid items properties:
+- `grid-area: start-row / start_column / end_row / end_column` end values are exclusive. Can be set with `span #`. Unites properties:
+  - `grid-row`:
+    - `grid-row-start`
+    - `grid-row-end`
+  - `grid-column`:
+    - `grid-column-start`
+    - `grid-column-end`
+- `align-self` - overrides parent grid container value for align property
+- `justify-self` - overrides parent grid container value for justify property
+
+#### Transition properties
+`transition` - shorthand for 4 properties:
+- `transition-property` - keyword `all` can be used to set same transition rules for all properties
+- `transition-duration`
+- `transition-timing-function`
+- `transition-delay`
+#### :+1: Pros
+Strutured and comprehensive CSS course that covered all tools needed to start. Good practice excersizes even in free version.
+#### :-1: Cons
+None
+#### :bulb: New
+`background-image` - property to set image as background of block element
+
+It is possible to set base for box size with property: `box-sizing`
+- *content-box* - size of element is size of content
+- *border-box* - size of element is total size of border, padding and content
+
+Fonts can be added in CSS style sheet with `@font-face {...details...}`
+
+#### :gift: Suprising
+Left and right margins in box model don't collapse, adds together
+Top and bottom margins in box model collapse, the largerst one effective 
+
+**HSL** (Hue Saturation Lightness) is usefull to make set of colors with the same saturation and lightness but different hue. To do it with RGB is far more complex.
+
+CSS has functions for grid model: `repeat(times, pattern)` and `minmax(minimum_size maximum_size)`
+#### :hammer: Useful
+References:
+- [CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Using CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+
+Cheatsheets:
+- [Selectors and Visual Rules](https://www.codecademy.com/learn/learn-css/modules/learn-css-selectors-visual-rules/cheatsheet)
+- [The Box Model](https://www.codecademy.com/learn/learn-css/modules/learn-css-box-model/cheatsheet)
+- [Display and Positioning](https://www.codecademy.com/learn/learn-css/modules/learn-css-display-positioning/cheatsheet)
+- [Colors](https://www.codecademy.com/learn/learn-css/modules/learn-css-colors/cheatsheet)
+- [Typography](https://www.codecademy.com/learn/learn-css/modules/learn-css-typography/cheatsheet)
+- [Layout with Flexbox](https://www.codecademy.com/learn/learn-css/modules/layout-with-flexbox/cheatsheet)
+- [Grid](https://www.codecademy.com/learn/learn-css/modules/learn-css-grid/cheatsheet)
 
 [:arrow_up_small: Back to this task content](#intro-to-html-and-css)
 
