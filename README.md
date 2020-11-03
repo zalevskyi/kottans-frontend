@@ -3,8 +3,8 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 # Stage 0
 
 `00` [Git Basics](#git-basics)
-- [Udacity course: Version Control with Git](#udacity-version-control-with-git)
-- [Visual interactive course: Learn Git Branching (Main 1st section, Remote 1st section)](#learn-git-branching---first-sections)
+- [Udacity: Version Control with Git](#udacity-version-control-with-git)
+- [Learn Git Branching - first sections](#learn-git-branching---first-sections)
 
 `01` [Linux CLI, and HTTP](#linux-cli-and-http)
 - [Linux Survival (4 modules)](#linux-survival)
@@ -12,19 +12,23 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [HTTP: The Protocol Every Web Developer Must Know - Part 2](#http-the-protocol-every-web-developer-must-know---part-2)
 
 `02` [Git Collaboration](#git-collaboration)
-- [Udacity course: GitHub & Collaboration](#github--collaboration)
-- [Visual interactive course: Learn Git Branching](#learn-git-branching)
+- [Udacity: GitHub & Collaboration](#udacity-github--collaboration)
+- [Learn Git Branching](#learn-git-branching)
 
 `03` [Intro to HTML and CSS](#intro-to-html-and-css)
-- [Udacity course: Intro to HTML and CSS](#udacity-course-intro-to-html-and-css)
+- [Udacity: Intro to HTML and CSS](#udacity-intro-to-html-and-css)
 - [codecademy: Learn HTML](#codecademy-learn-html)
 - [codecademy: Learn CSS](#codecademy-learn-css)
+
+`04` [Responsive Web Design](#responsive-web-design)
+- [Udacity: Responsive Web Design Fundamentals](#udacity-responsive-web-design-fundamentals)
+- [Game: Flexbox froggy](#game-flexbox-froggy)
 
 <hr>
 
 ## Git Basics
-- [Udacity course: Version Control with Git](#udacity-version-control-with-git)
-- [Visual interactive course: Learn Git Branching (Main 1st section, Remote 1st section)](#learn-git-branching---first-sections)
+- [Udacity: Version Control with Git](#udacity-version-control-with-git)
+- [Learn Git Branching - first sections](#learn-git-branching---first-sections)
 
 <hr>
 
@@ -345,12 +349,12 @@ Ways cache could be controled by both client and server using `Cache-Control` he
 <hr>
 
 ## Git Collaboration
-- [Udacity course: GitHub & Collaboration](#github--collaboration)
-- [Visual interactive course: Learn Git Branching](#learn-git-branching)
+- [Udacity: GitHub & Collaboration](#udacity-github--collaboration)
+- [Learn Git Branching](#learn-git-branching)
 
 <hr>
 
-### [GitHub & Collaboration](https://classroom.udacity.com/courses/ud456)
+### [Udacity: GitHub & Collaboration](https://classroom.udacity.com/courses/ud456)
 <details>
 <summary>Screenshots</summary>
 
@@ -450,13 +454,13 @@ Comparison of *merge* and *rebase*:
 <hr>
 
 ## Intro to HTML and CSS
-- [Udacity course: Intro to HTML and CSS](#udacity-course-intro-to-html-and-css)
+- [Udacity: Intro to HTML and CSS](#udacity-intro-to-html-and-css)
 - [codecademy: Learn HTML](#codecademy-learn-html)
 - [codecademy: Learn CSS](#codecademy-learn-css)
 
 <hr>
 
-### [Udacity course: Intro to HTML and CSS](https://www.udacity.com/course/intro-to-html-and-css--ud001)
+### [Udacity: Intro to HTML and CSS](https://www.udacity.com/course/intro-to-html-and-css--ud001)
 <details>
 <summary>Screenshots</summary>
 
@@ -682,6 +686,91 @@ Cheatsheets:
 - [Grid](https://www.codecademy.com/learn/learn-css/modules/learn-css-grid/cheatsheet)
 
 [:arrow_up_small: Back to this task content](#intro-to-html-and-css)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+## Responsive Web Design
+- [Udacity: Responsive Web Design Fundamentals](#udacity-responsive-web-design-fundamentals)
+- [Game: Flexbox froggy](#game-flexbox-froggy)
+
+<hr>
+
+### [Udacity: Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)
+<details>
+<summary>Screenshots</summary>
+
+![Udacity Responsive Web Design Fundamentals](task_responsive_web_design/udacity-responsive-web-design-fundamentals.jpg)
+</details>
+
+#### :key: Key takeaways
+#### Viewport and pixel size
+Pixel density varies significantly amoung devices. It is more usefull to make layout for device independent pixels, that is equivalent to ~96dpi. Ratio is calculated not from area (square) size but one dimension (width / height)
+
+`<meta name="viewport" content="width=device-width, initial-scale=1">` - it guides user agent:
+- to render page with width equal to device width and not render for larger viewport and then adjust
+- don't zoom in or out and use sizes defined in stylesheet
+
+[MDN article about viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)
+#### Media queries and breakpoints
+Most used media queries about user device are: `min-width`, `max-width`, `min-height`, `max-height`
+
+**Breakpoints** are defined parameters of device to change page layout.
+- *Major* breakpoints used to change overall page layout
+- *Minor* breakpoints used to change rendering of some page elements
+
+Ways to use media queries:
+- *Linked CSS*: many small http requests for each file `<link rel="stylesheet" media="screen and (min-width: 500px)" href="css.css">`
+- *Embed into stylesheet*: few http request for big files `@media screen and (min-width: 500 px) {...}`
+#### Responsive patterns for page layout
+It is better to start with small screen layout and prioritize page content. And then define breakpoints moving from small to big screen size.
+
+Generally used technics for page layout change:
+- Column drop
+- Mostly fluid
+- Off canvas - less used content goes off screen
+- Layout shifter - different layout for different screen sizes
+#### :+1: Pros
+Gives general understanding of the need for responsive design. Explains most used approaches and patterns for responsive layout.
+#### :-1: Cons
+Lacks guided practice to get skills.
+#### :bulb: New
+CSS properties:
+- `order`: flexbox item property to change its order in the flow
+- `transform`: for changing position of elements
+- `content`: to use other HTML element content in other place
+- `overflow-x: auto`: to add scroll inside individual element
+#### :gift: Suprising
+None
+#### :hammer: Useful
+Control elements used for tapping should have minimum width and height of *48px (including margin) to be used comfortably*
+
+`max-width` property overrides `width` value if the last becomes larger
+
+Comfortable to read width of text paragraph is 45-90 characters per line
+
+[:arrow_up_small: Back to this task content](#responsive-web-design)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [Game: Flexbox froggy](http://flexboxfroggy.com/)
+<details>
+<summary>Screenshots</summary>
+
+![Game Flexbox froggy]()
+</details>
+
+#### :key: Key takeaways
+#### :+1: Pros
+#### :-1: Cons
+#### :bulb: New
+#### :gift: Suprising
+#### :hammer: Useful
+
+[:arrow_up_small: Back to this task content](#responsive-web-design)
 
 [:arrow_double_up: Back to Stage 0 content](#stage-0)
 
