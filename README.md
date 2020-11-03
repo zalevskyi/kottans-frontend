@@ -760,15 +760,22 @@ Comfortable to read width of text paragraph is 45-90 characters per line
 <details>
 <summary>Screenshots</summary>
 
-![Game Flexbox froggy]()
+![Game Flexbox froggy](task_responsive_web_design/flexbox-froggy-completed.jpg)
 </details>
 
 #### :key: Key takeaways
+None. It is just a recap of flexbox knowledge.
 #### :+1: Pros
+Straightforward, visually clear, engaging flexbox properties practice.
 #### :-1: Cons
+None
 #### :bulb: New
+`align-self` property of a flex-item to change its behavior different way than flexbox container
 #### :gift: Suprising
+With `flex-direction: column` justify property becomes for vertical arrangement and align property for horizontal.
 #### :hammer: Useful
+- `align-content` is for rows
+- `align-items` is for elements within row
 
 [:arrow_up_small: Back to this task content](#responsive-web-design)
 
