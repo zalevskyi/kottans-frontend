@@ -26,6 +26,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 
 `06` [JS Basics](#js-basics)
 - [Udacity: Intro to JavaScript](#udacity-intro-to-javascript)
+- [freeCodeCamp: Intro to JavaScript](#freecodecamp-basic-javascript)
 
 <hr>
 
@@ -788,6 +789,7 @@ With `flex-direction: column` justify property becomes for vertical arrangement 
 
 ## JS Basics
 - [Udacity: Intro to JavaScript](#udacity-intro-to-javascript)
+- [freeCodeCamp: Intro to JavaScript](#freecodecamp-basic-javascript)
 
 <hr>
 
@@ -883,6 +885,40 @@ False values in boolean epressions:
 - null/undefined/NaN
 - '' (empty string)
 - ' ' (blank string, it does not matter how many white spaces or \n, \t, \r it contains.)
+
+[:arrow_up_small: Back to this task content](#js-basics)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [freeCodeCamp: Basic JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/)
+<details>
+<summary>Screenshots</summary>
+
+![freeCodeCamp: Basic JavaScript - completed](./task_js_basics/freecodecamp-javascript-basic-javascript.jpg)
+</details>
+
+#### :key: Key takeaways
+Array methods:
+- *push()* and *pop()* (add/remove element from stack, LIFO way)
+- *unshift()* and *shift()* (add/remove element from queue, FIFO way) - name meaning: *shift left*, remove the first element; *unshift left* - add free space at left to add the first element
+
+Objects
+
+Objects are arbitrary combination of any data types (strings, numbers, booleans, objects/arrays, functions)
+
+Work with properties:
+- *add property* - just use it
+- *remove property* - use `delete objectName.propertyName`
+- *check if object has property* - method `objectName.hasOwnProperty(propertyName)`
+#### :+1: Pros
+#### :-1: Cons
+#### :bulb: New
+`%` remainder operator is sometime incorrectly reffered as *modulus*, but it does not work propertly with negative numbers
+#### :gift: Suprising
+#### :hammer: Useful
+To split long string between line `+=` is used (string concatenating `str + str`)
 
 [:arrow_up_small: Back to this task content](#js-basics)
 
