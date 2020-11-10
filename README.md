@@ -24,6 +24,9 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [Udacity: Responsive Web Design Fundamentals](#udacity-responsive-web-design-fundamentals)
 - [Game: Flexbox froggy](#game-flexbox-froggy)
 
+`06` [JS Basics](#js-basics)
+- [Udacity: Intro to JavaScript](#udacity-intro-to-javascript)
+
 <hr>
 
 ## Git Basics
@@ -778,6 +781,110 @@ With `flex-direction: column` justify property becomes for vertical arrangement 
 - `align-items` is for elements within row
 
 [:arrow_up_small: Back to this task content](#responsive-web-design)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+## JS Basics
+- [Udacity: Intro to JavaScript](#udacity-intro-to-javascript)
+
+<hr>
+
+### [Udacity: Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803)
+<details>
+<summary>Screenshots</summary>
+
+![Udacity: Intro to JavaScript - Completed](./task_js_basics/udacity-intro-to-javascript.jpg)
+</details>
+
+#### :key: Key takeaways
+**Data types**
+- number
+- string - *unmutable*
+- boolean
+- null/undefined/NaN
+- object/array - *mutable*
+
+ECMAScript is loosly typed language. It uses implicit type casting/convertions/coercion. Thus two types of comparision are required:
+- Equality operators: === and !==
+- Equivalent operators: == and != (equal in case of of type casting)
+
+**Identifiers**
+
+Declaration:
+- `let` - variable, can be reasigned
+- `var` - variable, outdated does not support block scope
+- `const` - *can not be reasigned*, but if it contains mutable data type (array, object) its content can be updated
+- `function` - named block of code
+
+*Hoisting* - if identifier was declared not at the top of its scope, at the runtime ES will move declaration to the top - but assignment will be left as it is.
+
+Scope:
+- Global
+- Function
+- Block (`{...}`)
+
+Identifiers are accessable down (in nested `{...}`, functions or blocks of code)
+
+**Functions**
+
+Function default return value is `undefined`
+
+Function can be nested in other functions
+
+Function expressions:
+- function can be assigned to variable: `let f = function {}`
+- functions can be used as argument for other functions for callback via assigned variable or anonymous inline
+
+**Arrays**
+- Arrays can contain a mix of data types
+- .splice(start, length, new_items_list...) to update arbitrary part of an Array
+- .forEach(`function(element[,index,[whole_array])`) - callback function with passing each element of an array into it. Works only as side effect, return value only undefined
+- .map(`function(element[,index,[whole_array]]`)) - callback function with passing each element of an array into it. Returns array of new values
+
+**Objects**
+
+Object literal notation: `let objectName = {key : value, ...}`
+
+Value can be functional expression and its key will be method
+
+Two ways to access keys:
+- bracket notation: `objectName[keyName]` - works like dictionary
+- dot notation: `objectName.keyName`
+
+#### :+1: Pros
+Solid coverage of all introductory topics for JavaScript with no programming background.
+#### :-1: Cons
+It is based on ES5 initially, not ES6 or later
+#### :bulb: New
+Hoisting of identifiers declaration (moving it up in their scope at runtime)
+
+Print `[]` into console to get all methods and properties of an array
+#### :gift: Suprising
+Blank strings, that contain white spaces, new lines \n, carriage return \r, form feed \f (new page), tabulation \t - are false values.
+
+`switch` control flow statement works as `goto`:
+- `case` could be not ordered (case 1: case 4: case 2:)
+- everyting starting from selected `case` is executed, including cases below (fall trough) unless `break` is used.
+
+`switch` checks strict equal `===` for cases
+
+Functions can be nested
+#### :hammer: Useful
+There are different *not value* data types:
+- null
+- undefined
+- NaN (not a number)
+
+False values in boolean epressions:
+- false
+- 0
+- null/undefined/NaN
+- '' (empty string)
+- ' ' (blank string, it does not matter how many white spaces or \n, \t, \r it contains.)
+
+[:arrow_up_small: Back to this task content](#js-basics)
 
 [:arrow_double_up: Back to Stage 0 content](#stage-0)
 
