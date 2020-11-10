@@ -27,6 +27,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 `06` [JS Basics](#js-basics)
 - [Udacity: Intro to JavaScript](#udacity-intro-to-javascript)
 - [freeCodeCamp: Intro to JavaScript](#freecodecamp-basic-javascript)
+- [freeCodeCamp: ES6](#freecodecamp-es6)
 
 <hr>
 
@@ -790,6 +791,7 @@ With `flex-direction: column` justify property becomes for vertical arrangement 
 ## JS Basics
 - [Udacity: Intro to JavaScript](#udacity-intro-to-javascript)
 - [freeCodeCamp: Intro to JavaScript](#freecodecamp-basic-javascript)
+- [freeCodeCamp: ES6](#freecodecamp-es6)
 
 <hr>
 
@@ -913,12 +915,99 @@ Work with properties:
 - *remove property* - use `delete objectName.propertyName`
 - *check if object has property* - method `objectName.hasOwnProperty(propertyName)`
 #### :+1: Pros
+It is extensive practice of basic ES features
 #### :-1: Cons
+It is rather long and could be split into parts
 #### :bulb: New
 `%` remainder operator is sometime incorrectly reffered as *modulus*, but it does not work propertly with negative numbers
 #### :gift: Suprising
+Escape sequences:
+- `\b` - word boundary
+- `\f` - form feed
 #### :hammer: Useful
 To split long string between line `+=` is used (string concatenating `str + str`)
+
+[:arrow_up_small: Back to this task content](#js-basics)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [freeCodeCamp: ES6](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/)
+<details>
+<summary>Screenshots</summary>
+
+![freeCodeCamp: ES6 - completed](./task_js_basics/freecodecamp-javascript-es6.jpg)
+</details>
+
+#### :key: Key takeaways
+ES6 standart adds much syntactic sugar that feels very pythonic.
+
+**Identifiers names convention**
+- *variables* camelCase
+- *constant* ALL_UPPER_CASE
+- *class* UpperCamelCase
+- *private variable in object* _underScore
+
+**Arrow functions**
+
+Syntactic sugar to avoid keyword `function`
+- `(arg, ...) => {...}`
+- `(arg, ...) => value_to_return` - if there is only one statement to execute
+- `arg => {...}` - if function has only one parameter parentheses can be ommited
+
+**Function parameter**
+
+ES6 added default parameters values `function(parameterName=defaultValue)`
+
+**Packing, unpacking, destructing, extracting**
+- *rest parameter* `function(...args)` packing arbitrary long list of arguments into one array to be used in function. For example: `const sum = (...args) => args.reduce((a,b) => a+b, 0);`
+- *spread operator* unpacks array into arbitrary long list of arguments. For example: `newArray = [...arrayToSpread]`
+- *extracting values from object*:
+  - `const {objectKey1, objectKey2, ...} = object` - will assign object key values to new variables with same names as keys
+  - `const {objectKey1: newName1, ...} = object` - will assign object key values to new variables with arbitrary new names
+  - same works for nested objects: `const {nestedObject : {key1 : newName1, ...}} = object`
+  - it can be used in function parameters: `function({key1, key2,...})` and then call function with object that contain such keys as argument
+- *extracting values from array*: `[a, b] = [b, a]`, `[,a,b,,c] = [1,2,3,4,5]`
+- *slicing array till the end* with rest parameter that must be the last one: `[,, ...newArray] = [1,2,3,4,5,6]`
+
+**Literals**
+- string template literals: `let str = '...${variable}...'` with backticks - contains placeholders for variables and can be multiline in code
+- object literal (shorthand for assigning property values): `const someObject = (x, y) => ({x, y})` will product object with key names and values as provided variables `{x : x, y : y}`
+
+**Class**
+
+It is not actual class, but only syntax:
+- *constructor* - special `constructor() {...}` method that is called with `new` operator: `let variable = new MyClass()`
+- *getter*: `get name() {...}`
+- *setter*: `set name() {...}`
+
+**Modules**
+
+HTML tag to add ES script as module: `<script type='module' src='...'></script>`
+
+Export/Import statements:
+- `export {list_of_identifiers_to_export};`
+- `import {list_of_identifiers_to_import} from 'path'`
+- `import * as SomeObjectName from 'path'`
+
+
+**Promises**
+
+Promises (asynchronous execution) are used for processes that take an unknown amount of time:
+- *declare* `const myPromise = new Promise((resolve, reject)) => {...}` - resolve and reject are default functions for callback that will call .then()/.catch() methods
+- *positive result* `myPromise.then(result => {...})`
+- *negative result* `myPromise.catch(error => {...})`
+#### :+1: Pros
+It covers most important features added in ES6
+#### :-1: Cons
+It is not clear why not to study modern JS with new features initially, but instead study how they were added historically
+#### :bulb: New
+Object methods don't need `function` keyword: `let object = {do() {...}}`
+#### :gift: Suprising
+With `var` it was possible to declare identifier with the same name twice. With `let` it is not possible.
+#### :hammer: Useful
+To prevent updating mutable objects (to make them constant) - they can be freezed: `Object.freeze(yourObjectToFreeze)`
 
 [:arrow_up_small: Back to this task content](#js-basics)
 
