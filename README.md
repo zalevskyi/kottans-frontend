@@ -28,6 +28,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [Udacity: Intro to JavaScript](#udacity-intro-to-javascript)
 - [freeCodeCamp: Intro to JavaScript](#freecodecamp-basic-javascript)
 - [freeCodeCamp: ES6](#freecodecamp-es6)
+- [freeCodeCamp: Basic Data Structures](#freecodecamp-basic-data-structures)
 
 <hr>
 
@@ -622,7 +623,7 @@ Flex items properties:
 Grid is used to layout the whole page.
 
 Grid containers properties:
-- `grid template: [rows] / [columns]`. Can be used gunctions repeat() and minmax(). Unites two properties:
+- `grid template: [rows] / [columns]`. Can be used functions repeat() and minmax(). Unites two properties:
   - `grid-template-rows`
   - `grid-template-columns`
 - `grid-temaplate-areas: "..."` used to create grid with shorthand named sections 
@@ -792,6 +793,7 @@ With `flex-direction: column` justify property becomes for vertical arrangement 
 - [Udacity: Intro to JavaScript](#udacity-intro-to-javascript)
 - [freeCodeCamp: Intro to JavaScript](#freecodecamp-basic-javascript)
 - [freeCodeCamp: ES6](#freecodecamp-es6)
+- [freeCodeCamp: Basic Data Structures](#freecodecamp-basic-data-structures)
 
 <hr>
 
@@ -1008,6 +1010,45 @@ Object methods don't need `function` keyword: `let object = {do() {...}}`
 With `var` it was possible to declare identifier with the same name twice. With `let` it is not possible.
 #### :hammer: Useful
 To prevent updating mutable objects (to make them constant) - they can be freezed: `Object.freeze(yourObjectToFreeze)`
+
+[:arrow_up_small: Back to this task content](#js-basics)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [freeCodeCamp: Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/)
+<details>
+<summary>Screenshots</summary>
+
+![freeCodeCamp: Basic Data Structures - completed](./task_js_basics/freecodecamp-javascript-basic-data-structures.jpg)
+</details>
+
+#### :key: Key takeaways
+Array slice method: `array.slice(start_index, end_index_excluding)`
+
+Array spread operator to insert one array into another: `let oneArray = []; let otherArray = [1,...oneArray,2]`
+
+**Keyword** `in`
+- `element in array`
+- `key in object` equivalent to `object.hasOwnProperty(key)`
+
+Loops over object keys: `for (let key in object) {...}`
+
+Loops over array index: `for (let index in array) {...}`
+
+#### :+1: Pros
+Short, focused review of basic operations with arrays and objects
+#### :-1: Cons
+Lacks more complex operations like array methonds .every(), .forEach(), .map().
+#### :bulb: New
+Array methods: push() and unshift() takes arbitrary number of arguments to add into array
+#### :gift: Suprising
+List of all keys in object return not with object own method, but with method of special object: `Object.keys(myObject)`
+#### :hammer: Useful
+Safe reference to not existing elements:
+- `array.indexOf(element)` will return -1
+- `object[not_valid_key]` will return undefined
 
 [:arrow_up_small: Back to this task content](#js-basics)
 
