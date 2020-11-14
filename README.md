@@ -29,6 +29,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [freeCodeCamp: Intro to JavaScript](#freecodecamp-basic-javascript)
 - [freeCodeCamp: ES6](#freecodecamp-es6)
 - [freeCodeCamp: Basic Data Structures](#freecodecamp-basic-data-structures)
+- [freeCodeCamp: Basic Algorithm Scripting](#freecodecamp-basic-algorithm-scripting)
 
 <hr>
 
@@ -498,11 +499,7 @@ Links to great references:
 <hr>
 
 ### [codecademy: Learn HTML](https://www.codecademy.com/learn/learn-html)
-<details>
-<summary>Screenshots</summary>
-
 ![codecademy Learn HTML](task_html_css_intro/codecademy-learn-html-completed.jpg)
-</details>
 
 #### :key: Key takeaways
 **Metadata** - information about the page that is not displayed directly on the page
@@ -545,11 +542,7 @@ Cheatsheets:
 <hr>
 
 ### [codecademy: Learn CSS](https://www.codecademy.com/learn/learn-css)
-<details>
-<summary>Screenshots</summary>
-
 ![codecademy Learn CSS](task_html_css_intro/codecademy-learn-css-completed.jpg)
-</details>
 
 #### :key: Key takeaways
 #### Box model
@@ -763,11 +756,7 @@ Comfortable to read width of text paragraph is 45-90 characters per line
 <hr>
 
 ### [Game: Flexbox froggy](http://flexboxfroggy.com/)
-<details>
-<summary>Screenshots</summary>
-
 ![Game Flexbox froggy](task_responsive_web_design/flexbox-froggy-completed.jpg)
-</details>
 
 #### :key: Key takeaways
 None. It is just a recap of flexbox knowledge.
@@ -794,7 +783,7 @@ With `flex-direction: column` justify property becomes for vertical arrangement 
 - [freeCodeCamp: Intro to JavaScript](#freecodecamp-basic-javascript)
 - [freeCodeCamp: ES6](#freecodecamp-es6)
 - [freeCodeCamp: Basic Data Structures](#freecodecamp-basic-data-structures)
-
+- [freeCodeCamp: Basic Algorithm Scripting](#freecodecamp-basic-algorithm-scripting)
 <hr>
 
 ### [Udacity: Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803)
@@ -897,11 +886,7 @@ False values in boolean epressions:
 <hr>
 
 ### [freeCodeCamp: Basic JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/)
-<details>
-<summary>Screenshots</summary>
-
 ![freeCodeCamp: Basic JavaScript - completed](./task_js_basics/freecodecamp-javascript-basic-javascript.jpg)
-</details>
 
 #### :key: Key takeaways
 Array methods:
@@ -936,11 +921,7 @@ To split long string between line `+=` is used (string concatenating `str + str`
 <hr>
 
 ### [freeCodeCamp: ES6](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/)
-<details>
-<summary>Screenshots</summary>
-
 ![freeCodeCamp: ES6 - completed](./task_js_basics/freecodecamp-javascript-es6.jpg)
-</details>
 
 #### :key: Key takeaways
 ES6 standart adds much syntactic sugar that feels very pythonic.
@@ -1018,11 +999,7 @@ To prevent updating mutable objects (to make them constant) - they can be freeze
 <hr>
 
 ### [freeCodeCamp: Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/)
-<details>
-<summary>Screenshots</summary>
-
 ![freeCodeCamp: Basic Data Structures - completed](./task_js_basics/freecodecamp-javascript-basic-data-structures.jpg)
-</details>
 
 #### :key: Key takeaways
 Array slice method: `array.slice(start_index, end_index_excluding)`
@@ -1049,6 +1026,30 @@ List of all keys in object return not with object own method, but with method of
 Safe reference to not existing elements:
 - `array.indexOf(element)` will return -1
 - `object[not_valid_key]` will return undefined
+
+[:arrow_up_small: Back to this task content](#js-basics)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [freeCodeCamp: Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/)
+![freeCodeCamp: Basic Algorithm Scripting - completed](./task_js_basics/freecodecamp-javascript-basic-algorithm-scripting.jpg)
+
+#### :key: Key takeaways
+Spread operator `...array` is very useful
+
+It is possible to iterate through string letters indeces: `for (let index in str) {...}`
+#### :+1: Pros
+Just good practice of solving basic tasks
+#### :-1: Cons
+None
+#### :bulb: New
+None
+#### :gift: Suprising
+None
+#### :hammer: Useful
+[MDN JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 [:arrow_up_small: Back to this task content](#js-basics)
 
