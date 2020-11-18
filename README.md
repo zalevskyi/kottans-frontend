@@ -30,6 +30,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [freeCodeCamp: ES6](#freecodecamp-es6)
 - [freeCodeCamp: Basic Data Structures](#freecodecamp-basic-data-structures)
 - [freeCodeCamp: Basic Algorithm Scripting](#freecodecamp-basic-algorithm-scripting)
+- [freeCodeCamp: Functional Programming](#freecodecamp-functional-programming)
 
 <hr>
 
@@ -784,6 +785,7 @@ With `flex-direction: column` justify property becomes for vertical arrangement 
 - [freeCodeCamp: ES6](#freecodecamp-es6)
 - [freeCodeCamp: Basic Data Structures](#freecodecamp-basic-data-structures)
 - [freeCodeCamp: Basic Algorithm Scripting](#freecodecamp-basic-algorithm-scripting)
+- [freeCodeCamp: Functional Programming](#freecodecamp-functional-programming)
 <hr>
 
 ### [Udacity: Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803)
@@ -1050,6 +1052,78 @@ None
 None
 #### :hammer: Useful
 [MDN JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
+[:arrow_up_small: Back to this task content](#js-basics)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [freeCodeCamp: Functional Programming](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/)
+![freeCodeCamp: Functional Programming - completed](./task_js_basics/freecodecamp-javascript-functional-programming.jpg)
+
+#### :key: Key takeaways
+Functional programming is a style of programming that uses mathematical approach to functions: maping input to output.
+
+*Pure functions* - the same input always gives the same output
+
+`INPUT -> PROCESS -> OUTPUT`
+
+Functional programming core principles:
+- *Isolated functions* are independent from the state of the program or global variables. They only depend on the arguments passed into them to make a calculation. *Always declare your dependencies explicitly* - if function depends on a variable, the last should be passed in as an argument
+- *Functions have no side effects* in the program: changes to the state of the program, variables passed in as argument or global objects holding data
+
+*Mutation* is changing/altering things.
+
+*Side effect* is outcome of mutation. Side effects lead to bugs.
+
+Functional programming is a form of *declarative* programming: you tell the computer what you want done by calling a method or function. In contrast *imperative* programming that gives commands, a set of statements to perform.
+
+*First class objects* can be:
+- assigned to a variable
+- passed into anouther function
+- returned from another function
+
+*Higher order* functions either:
+- take a function as an argument
+- return a function as an return value
+
+*lambda* functions either:
+- passed in to another function
+- returned from another function
+
+*Callback* functions that passed into another function to decide the invocation of that function
+
+*arity* - number of arguments that a function requires
+
+*Currying* a function means to convert a function of N arity into N functions of arity 1. For example:
+- `curried = x => y => x+y1`
+- `function curried(x) {return function(y) {return x+y}}`
+
+will be called as `curried(1)(2)`
+
+This is useful in your program if you can't supply all the arguments to a function at one time. You can save each function call into a variable, which will hold the returned function reference that takes the next argument when it's available.
+
+`partial application` can be described as applying a few arguments to a function at a time and returning another function that is applied to more arguments. For example:
+
+```
+function impartial(x,y,z) {return x+y+z}
+let partialFn = impartial.bind(this,1,2);
+partial(10);
+```
+#### :+1: Pros
+Good introduction into functional programming and practice with array and string methods
+#### :-1: Cons
+Not balanced tasks. Some of them are solved in a minute, others could take significant amount of time.
+#### :bulb: New
+- All functions in ES are first class functions
+- Currying and partial application of functions
+#### :gift: Suprising
+JavaScript's default sorting method is by string Unicode point value, which may return unexpected results. Therefore, it is encouraged to provide a callback function to specify how to sort the array items.
+#### :hammer: Useful
+Universal usage of `array.reduce()` method to perform task with an array.
+
+`Array.reduce()` - universal method over array elements
 
 [:arrow_up_small: Back to this task content](#js-basics)
 
