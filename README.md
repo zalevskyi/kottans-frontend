@@ -31,6 +31,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [freeCodeCamp: Basic Data Structures](#freecodecamp-basic-data-structures)
 - [freeCodeCamp: Basic Algorithm Scripting](#freecodecamp-basic-algorithm-scripting)
 - [freeCodeCamp: Functional Programming](#freecodecamp-functional-programming)
+- [freeCodeCamp: Intermediate Algorithm Scripting](#freecodecamp-intermediate-algorithm-scripting)
 
 <hr>
 
@@ -786,6 +787,7 @@ With `flex-direction: column` justify property becomes for vertical arrangement 
 - [freeCodeCamp: Basic Data Structures](#freecodecamp-basic-data-structures)
 - [freeCodeCamp: Basic Algorithm Scripting](#freecodecamp-basic-algorithm-scripting)
 - [freeCodeCamp: Functional Programming](#freecodecamp-functional-programming)
+- [freeCodeCamp: Intermediate Algorithm Scripting](#freecodecamp-intermediate-algorithm-scripting)
 <hr>
 
 ### [Udacity: Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803)
@@ -1097,7 +1099,7 @@ Functional programming is a form of *declarative* programming: you tell the comp
 *arity* - number of arguments that a function requires
 
 *Currying* a function means to convert a function of N arity into N functions of arity 1. For example:
-- `curried = x => y => x+y1`
+- `curried = x => y => x+y`
 - `function curried(x) {return function(y) {return x+y}}`
 
 will be called as `curried(1)(2)`
@@ -1124,6 +1126,28 @@ JavaScript's default sorting method is by string Unicode point value, which may 
 Universal usage of `array.reduce()` method to perform task with an array.
 
 `Array.reduce()` - universal method over array elements
+
+[:arrow_up_small: Back to this task content](#js-basics)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [freeCodeCamp: Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/)
+![freeCodeCamp: Intermediate Algorithm Scripting - completed](./task_js_basics/freecodecamp-javascript-intermediate-algorithm-scripting.jpg)
+
+#### :key: Key takeaways
+None
+#### :+1: Pros
+Good practice of searching in documentation for built-in methods to use
+#### :-1: Cons
+That is not ES6+ initially course. One of the tasks suggests to use *argument* object instead of *rest parameter*
+#### :bulb: New
+None
+#### :gift: Suprising
+The `str.replace(pattern, replacement)` method returns a new string with some or all matches of a *pattern* replaced by a *replacement*. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. *If pattern is a string, only the first occurrence will be replaced*
+#### :hammer: Useful
+Currying of function in [Arguments Optional](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/arguments-optional) task
 
 [:arrow_up_small: Back to this task content](#js-basics)
 
