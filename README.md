@@ -33,6 +33,10 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [freeCodeCamp: Functional Programming](#freecodecamp-functional-programming)
 - [freeCodeCamp: Intermediate Algorithm Scripting](#freecodecamp-intermediate-algorithm-scripting)
 
+`07` [Document Object Model](#dom)
+- [Udacity: JavaScript and the DOM](#udacity-javascript-and-the-dom)
+- [freeCodeCamp: Intermediate Algorithm Scripting (completed in 06 JS Basics task)](#freecodecamp-intermediate-algorithm-scripting)
+
 <hr>
 
 ## Git Basics
@@ -1150,6 +1154,102 @@ The `str.replace(pattern, replacement)` method returns a new string with some or
 Currying of function in [Arguments Optional](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/arguments-optional) task
 
 [:arrow_up_small: Back to this task content](#js-basics)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+## DOM
+- [Udacity: JavaScript and the DOM](#udacity-javascript-and-the-dom)
+- [freeCodeCamp: Intermediate Algorithm Scripting (completed in 06 JS Basics task)](#freecodecamp-intermediate-algorithm-scripting)
+
+<hr>
+
+### [Udacity: JavaScript and the DOM](https://www.udacity.com/course/javascript-and-the-dom--ud117)
+<details>
+<summary>Screenshots</summary>
+
+![Udacity: JavaScript and the DOM - completed](./task_js_dom/udacity-javascript-and-the-dom.jpg)
+</details>
+
+#### :key: Key takeaways
+DOM is tree like structure that represent HTML document:
+- tracks relationship between elements
+- contains the content and properties of the elements
+
+Interfaces: EventTarget <- Node <- Element
+
+**Document** interface
+
+Selecting  elements:
+- `.getElementById()`
+- `.getElementsByClassName()`
+- `.getElementsByTagName()`
+- `.querySelector()` using CSS selector, returns the first element
+- `.querySelectorAll()` using CSS selector, returns all elements
+
+Creating elements:
+- `.createElement()`
+- `.createTextNode()`
+- `.createDocumentFragment()` - document like object outside of DOM for performance needs
+
+**Element** interface:
+- `.outerHTML` - HTML including element itself
+- `.innerHTML`
+- `.textContent` - all text including text of child elements
+- `.innerText` - text after applying CSS
+- `.style`
+- `.classList`
+- `.appendChild()` - moves element, not copying
+- `.remove()` - removes element itself
+- `.removeChild()`
+- `.insertAdjucentHTMl()` - options: beforebegin (sibling before), afterbegin (the first child), beforeend (the last child), afterend (next sibling)
+
+**EventTarget** interface:
+- `.addEventListener()`
+- `.removeEventListener()`
+- `.dispatchEvent()`
+
+Event phases:
+1. capturing (from document to event element through DOM-tree path)
+2. at target
+3. bubbling (from event element to document)
+*Event delegation* is the process of delegating to a parent element the ability to manage events for child elements
+
+**Event** interface
+- `.preventDefault()`
+- `.target`
+
+ES is single threaded:
+- single threaded (call stack of functions)
+- run to completion
+- synchronous (at the same time)
+Asynchronous (runs sometime later) delivered via browser: Web API and Queue.
+
+Browser core tasks:
+- reflow: laying out the page (dimensions and positions of elements) - it is time consuming
+- repaint: draws DOM layout
+`performance.now()` - to measure time used to run the code
+
+#### :+1: Pros
+Gives solid understanding of DOM and touches the most basic performance improving approaches
+#### :-1: Cons
+None
+#### :bulb: New
+**Event Loop** : Browser (Web API) -> Queue -> Stack
+
+Run to completion all functions in call stack. While idle check Queue if anything waiting
+#### :gift: Suprising
+**Web API** (browser API) is not part of ES. For example: `.addEventListener()` and `.setTimeout()` are part of Web API.
+#### :hammer: Useful
+Break up long-running code to prevent browser not responding for users interactions with `.setTimeout()` to 0 milliseconds. It will put the excution code into Queue.
+
+To improve performance while updating some DOM element it could be done in three steps:
+- hide (repaint only)
+- change all that is needed
+- show (reflow and repaint)
+
+[:arrow_up_small: Back to this task content](#dom)
 
 [:arrow_double_up: Back to Stage 0 content](#stage-0)
 
