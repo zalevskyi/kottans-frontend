@@ -24,6 +24,9 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [Udacity: Responsive Web Design Fundamentals](#udacity-responsive-web-design-fundamentals)
 - [Game: Flexbox froggy](#game-flexbox-froggy)
 
+`05` [HTML & CSS](#html-&-css)
+- [Practice: Hooli-style Popup](#practice-hooli-style-popup)
+
 `06` [JS Basics](#js-basics)
 - [Udacity: Intro to JavaScript](#udacity-intro-to-javascript)
 - [freeCodeCamp: Intro to JavaScript](#freecodecamp-basic-javascript)
@@ -779,6 +782,31 @@ With `flex-direction: column` justify property becomes for vertical arrangement 
 - `align-items` is for elements within row
 
 [:arrow_up_small: Back to this task content](#responsive-web-design)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+## HTML & CSS
+- [Practice: Hooli-style Popup](#practice-hooli-style-popup)
+
+### [Practice: Hooli-style Popup](https://zalevskyi.github.io/kottans-frontend/html-css-popup/popup.html)
+#### :key: Key takeaways
+Avoid styling by id or tag. There are separate responsibilities:
+- HTML **tag** is for markup
+- CSS **class** is for styling
+- HTML **ID** is for
+  - inner page links
+  - JS logic
+  - linking label with checkbox/radio button
+
+CSS stylying by id or tag is kind of legacy. It is more practical to use style in JS with Element property: `.classList`
+
+CSS selectors works only *downstream* (cascading down): children or next siblings. It does not work upstream: parent or sibligns before due to performance reasons. [There are no parent selectors in CSS](https://css-tricks.com/parent-selectors-in-css/)
+
+Navigation menu should be done using lists: [Why do navigation bars in HTML5 as lists](https://stackoverflow.com/questions/36811224/why-do-navigation-bars-in-html5-as-lists)
+
+[:arrow_up_small: Back to this task content](#html-&-css)
 
 [:arrow_double_up: Back to Stage 0 content](#stage-0)
 
