@@ -40,6 +40,8 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [Udacity: JavaScript and the DOM](#udacity-javascript-and-the-dom)
 - [freeCodeCamp: Intermediate Algorithm Scripting (completed in 06 JS Basics task)](#freecodecamp-intermediate-algorithm-scripting)
 
+`08` [Building a Tiny JS World (pre-OOP)](#building-a-tiny-js-world-pre-oop)
+
 <hr>
 
 ## Git Basics
@@ -133,7 +135,7 @@ Google docs revision history
 #### :hammer: Useful
 First of all run command `git status` in every git directory
 
-`git add .` adds all modified files from working tree into staging index except listed in `.gitignore` file 
+`git add .` adds all modified files from working tree into staging index except listed in `.gitignore` file
 
 Navigation in unix command line pager program: **less**
 - down: j, d (*down* half page), f (*full* page down)
@@ -628,7 +630,7 @@ Grid containers properties:
 - `grid template: [rows] / [columns]`. Can be used functions repeat() and minmax(). Unites two properties:
   - `grid-template-rows`
   - `grid-template-columns`
-- `grid-temaplate-areas: "..."` used to create grid with shorthand named sections 
+- `grid-temaplate-areas: "..."` used to create grid with shorthand named sections
 - `grid-gap` unites two properties:
   - `grid-row-gap`
   - `grid-column-gap`
@@ -674,7 +676,7 @@ Fonts can be added in CSS style sheet with `@font-face {...details...}`
 
 #### :gift: Suprising
 Left and right margins in box model don't collapse, adds together
-Top and bottom margins in box model collapse, the largerst one effective 
+Top and bottom margins in box model collapse, the largerst one effective
 
 **HSL** (Hue Saturation Lightness) is usefull to make set of colors with the same saturation and lightness but different hue. To do it with RGB is far more complex.
 
@@ -805,6 +807,8 @@ CSS stylying by id or tag is kind of legacy. It is more practical to use style i
 CSS selectors works only *downstream* (cascading down): children or next siblings. It does not work upstream: parent or sibligns before due to performance reasons. [There are no parent selectors in CSS](https://css-tricks.com/parent-selectors-in-css/)
 
 Navigation menu should be done using lists: [Why do navigation bars in HTML5 as lists](https://stackoverflow.com/questions/36811224/why-do-navigation-bars-in-html5-as-lists)
+
+Property `appearance: none` to hide element from the flow and screen. [Example](https://www.youtube.com/watch?v=E6kLaaQFctU&ab_channel=VadimMakeev)
 
 [:arrow_up_small: Back to this task content](#html-&-css)
 
@@ -1278,6 +1282,18 @@ To improve performance while updating some DOM element it could be done in three
 - show (reflow and repaint)
 
 [:arrow_up_small: Back to this task content](#dom)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+## Building a Tiny JS World (pre-OOP)
+[A Tiny JS World](https://zalevskyi.github.io/kottans-frontend/practice/a-tiny-js-world/index.html)
+
+#### :key: Key takeaways
+Object copying:
+- `let objCopy = Object.assign({}, objSource)` - shallow copied, the source top-level properties are copied without any reference and there exist a source property whose value is an object and is copied as a reference
+- `let objCopy = JSON.parse(JSON.stringify(objSource))` - A deep copy will duplicate every object it encounters. The copy and the original object will not share anything, so it will be a copy of the original. But this method can’t be used to copy user-defined object methods.
 
 [:arrow_double_up: Back to Stage 0 content](#stage-0)
 
