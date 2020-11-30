@@ -42,6 +42,11 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 
 `08` [Building a Tiny JS World (pre-OOP)](#building-a-tiny-js-world-pre-oop)
 
+
+`09` [Object Oriented JS](#object-oriented-js)
+- [Codewars](#codewars)
+- [Udacity: Object-oriented JavaScript](#udacity-object-oriented-javascript)
+- [Frogger Game]()
 <hr>
 
 ## Git Basics
@@ -1291,9 +1296,132 @@ To improve performance while updating some DOM element it could be done in three
 [A Tiny JS World](https://zalevskyi.github.io/kottans-frontend/practice/a-tiny-js-world/index.html)
 
 #### :key: Key takeaways
-Object copying:
+Object [copying](https://www.digitalocean.com/community/tutorials/copying-objects-in-javascript):
 - `let objCopy = Object.assign({}, objSource)` - shallow copied, the source top-level properties are copied without any reference and there exist a source property whose value is an object and is copied as a reference
 - `let objCopy = JSON.parse(JSON.stringify(objSource))` - A deep copy will duplicate every object it encounters. The copy and the original object will not share anything, so it will be a copy of the original. But this method can’t be used to copy user-defined object methods.
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+## Object Oriented JS
+- [Codewars](#codewars)
+- [Udacity: Object-oriented JavaScript](#udacity-object-oriented-javascript)
+- [Frogger Game]()
+
+<hr>
+
+### Codewars
+[<img src='https://www.codewars.com/users/zalevskyi/badges/large'>](https://www.codewars.com/users/zalevskyi)
+
+[:arrow_up_small: Back to this task content](#object-oriented-js)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [Udacity: Object-oriented JavaScript](https://classroom.udacity.com/courses/ud015)
+<details>
+<summary>Screenshots</summary>
+
+![Udacity: Object-oriented JavaScript Completed](./task_js_oop/udacity-object-oriented-javascript.jpg)
+</details>
+
+#### :key: Key takeaways
+**Scope**
+
+The current context of execution. The context in which values and expressions are "visible" or can be referenced. [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Scope). Looking for a variable will fall through scopes upstream (from inner to global)
+
+*Lexical scope* source code `{...}` block for `let` variables and functions for `var` variables
+
+*In-memory/execution scope/context* actual call stack placeholder of function call. Same function (one lexical scope) can be called multiple times and have multiple execution scopes (one for each call)
+
+**Closure**
+
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+
+Inner function will always have access to outer scope even after outer function returns. Memory of function call (inner and outer scope) chain in call stack will not be freed if there will be still reference to inner function
+
+**function sharing**
+
+Same function (object in memory) can be property of different objects. Thus you can write function ones and use it for many objects. Keyword *this* is the way to refer to specific object/instance.
+
+**this**
+
+`this` is a parameter defined ***at the execution time***, it is the object found to the left of the dot ***at the moment*** when function is called. As other parameters it is defined/bind to value at the time of function execution
+- fn() - *this* will be `<global>` - default value
+- obj.fn() - *this* will be obj
+- fn.call(this) - *this* will be the first parameter
+- obj.fn.call(this) - *this* will be the first parameter
+- setTimeout(obj.fn()) - *this* will be `<global>`, as at the time of invocation it is just fn() without object
+
+**Prototype chains**
+
+`obj = Object.create(prototype)` [method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) creates a new object, using an existing object as the prototype of the newly created object.
+
+Object has access to all properties of it prototype, and it is chained to the top level prototype.
+
+Object property lookup starts with an instance, in case of failure moves up to its prototype for it and so on.
+
+**Decorator function**
+
+Function that adds features/properties to the object:
+- `let likeClass = function(obj, ...) {... return obj}`
+
+**Functional Classes / constructor function**
+
+Function that creates new empty object and fills it with features/properties:
+- `let SomeClass = function(...) {... return newObj}`
+
+**Prototypal Classes**
+
+Each object instance has property: `Object.prototype.constructor` that references to constructor function that created the instance object. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+
+```
+let SomeClass = function() {
+  let obj = Object.create(SomeClass.prototype)
+  ... //add properties specific for an instance
+  return obj
+}
+SomeClass.prototype = {
+  //set properties shared between all instances
+}
+```
+**Pseudoclassical Classes**
+```
+let SomeClass = function() {
+  //using keyword new implies adding this assignment
+  //this = Object.create(SomeClass.prototype)
+  ... //add properties specific for an instance
+  //return this
+}
+SomeClass.prototype = {
+  //set properties shared between all instances
+}
+let obj = new SomeClass()
+```
+**Inheritance**
+```
+let SubClass = function() {
+  SuperClass.call(this)
+  ...
+}
+SubClass.prototype = Object.create(SuperClass.prototype)
+SubClass.prototype.constructor = SubClass
+```
+We have to create inheritance both for sub-class and sub-class prototype from respectful one of super-class and clearly reference to sub-class constructor to override super-class prototype constructor value
+#### :+1: Pros
+Short videos
+#### :-1: Cons
+It does not reflects ES6+ features
+#### :bulb: New
+`this` can not be assigned
+#### :gift: Suprising
+Prototype chain approach in contrast to classes aproach in other languages. It becomes complex to maintain as you need to assure inheritance for two objects: object itself and object.prototype
+#### :hammer: Useful
+Decorator function as approach to add features to an object
+
+[:arrow_up_small: Back to this task content](#object-oriented-js)
 
 [:arrow_double_up: Back to Stage 0 content](#stage-0)
 
