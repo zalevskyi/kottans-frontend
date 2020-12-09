@@ -39,6 +39,7 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 `07` [Document Object Model](#dom)
 - [Udacity: JavaScript and the DOM](#udacity-javascript-and-the-dom)
 - [freeCodeCamp: Intermediate Algorithm Scripting (completed in 06 JS Basics task)](#freecodecamp-intermediate-algorithm-scripting)
+- [JS DOM Practical task](#js-dom-practical-task)
 
 `08` [Building a Tiny JS World (pre-OOP)](#building-a-tiny-js-world-pre-oop)
 
@@ -47,6 +48,12 @@ Repository for my personal reflections, code and notes about [Front-End Course](
 - [Codewars](#codewars)
 - [Udacity: Object-oriented JavaScript](#udacity-object-oriented-javascript)
 - [Frogger Game]()
+
+`10` [OOP](#oop)
+
+`11` [Offline Web Applications](#offline-web-applications)
+- [Udacity: Offline Web Applications](#udacity-offline-web-applications)
+
 <hr>
 
 ## Git Basics
@@ -1199,6 +1206,7 @@ Currying of function in [Arguments Optional](https://www.freecodecamp.org/learn/
 ## DOM
 - [Udacity: JavaScript and the DOM](#udacity-javascript-and-the-dom)
 - [freeCodeCamp: Intermediate Algorithm Scripting (completed in 06 JS Basics task)](#freecodecamp-intermediate-algorithm-scripting)
+- [JS DOM Practical task](#js-dom-practical-task)
 
 <hr>
 
@@ -1285,6 +1293,20 @@ To improve performance while updating some DOM element it could be done in three
 - hide (repaint only)
 - change all that is needed
 - show (reflow and repaint)
+
+[:arrow_up_small: Back to this task content](#dom)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+### [JS DOM Practical task](https://zalevskyi.github.io/kottans-frontend/practice/dom/index.html)
+
+#### :key: Key takeaways
+- Using constanst decrease number of DOM manipulations
+- Large number of event listeners decrease performance
+- Readability improves with sections separated by empty lines: defining constants - defining functions - calling functions
+- All uppercase for constants by convention
 
 [:arrow_up_small: Back to this task content](#dom)
 
@@ -1422,6 +1444,71 @@ Prototype chain approach in contrast to classes aproach in other languages. It b
 Decorator function as approach to add features to an object
 
 [:arrow_up_small: Back to this task content](#object-oriented-js)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+## OOP
+- [Building a Tiny JS World (post-OOP)](#entity)
+
+<hr>
+
+#### :key: Key takeaways
+OOP principles:
+1. Encapsulation - binds together the data and functions that manipulate the data, and that keeps both safe from outside interference and misuse
+2. Abstraction - hides all but the relevant data about an object in order to reduce complexity and increase efficiency
+3. Inheritence - reuse common logic
+4. Polymorphism
+
+`this` - is function execution context
+`new` - `this` will be set to the new object
+
+[ES6 style of inheritence](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
+#### :+1: Pros
+#### :-1: Cons
+#### :bulb: New
+#### :gift: Suprising
+#### :hammer: Useful
+
+[:arrow_up_small: Back to this task content](#oop)
+
+[:arrow_double_up: Back to Stage 0 content](#stage-0)
+
+<hr>
+
+## Offline Web Applications
+- [Udacity: Offline Web Applications](#udacity-offline-web-applications)
+
+<hr>
+
+### [Udacity: Offline Web Applications](https://www.udacity.com/course/offline-web-applications--ud899)
+<details>
+<summary>Screenshots</summary>
+
+![Udacity: Offline Web Appliactions - completed](./task_offline_web_app/udacity-offline-web-applications.jpg)
+</details>
+
+#### :key: Key takeaways
+*Service Worker* - a layer between user and internet, it can intercept requests and respond with locally stored data
+
+MDN articles:
+- [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker)
+- [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
+- [IndexDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+- [Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+#### :+1: Pros
+None
+#### :-1: Cons
+Not working Node.js packages
+#### :bulb: New
+Interception of network requests with service worker
+#### :gift: Suprising
+Database storage built-in into browser
+#### :hammer: Useful
+Arbitrary cache of internet requests
+
+[:arrow_up_small: Back to this task content](#offline-web-applications)
 
 [:arrow_double_up: Back to Stage 0 content](#stage-0)
 
