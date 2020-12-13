@@ -7,82 +7,62 @@
 
 // ======== OBJECTS DEFINITIONS ========
 // Define your objects here
-
-class Species {
-   constructor(genus, sound, legs, hands) {
-      this.genus=genus; this.sound=sound; this.legs=legs; this.hands=hands
-   }
-}
-/* This World assumption:
-   Individums has no variation (sound, legs, hands)
-   from general species of their kind*/
-class Individum {
-   constructor(name, gender, species) {
-      this.name=name, this.gender=gender, this.species=species, this.friends = new Set()
-   }
-   get greeting() {
-      return this.species.genus==='human' ? `Hi, my name is ${this.name}` : this.species.sound
-   }
-   get profile() {
-      return [`species: ${this.species.genus}`, `name: ${this.name}`, `gender: ${this.gender}`,
-              `legs: ${this.species.legs}`, `hands: ${this.species.hands}`].join('; ')
-   }
-   get friendsList() {
-      if (this.friends.size===0) return 'none'
-      else return Array.from(this.friends).map(f => `${f.name} (${f.species.genus}, ${f.gender})`).join(', ')
-   }
-   static becomeFriends(f1, f2) {
-      f1.friends.add(f2)
-      f2.friends.add(f1)
-   }
-}
-function friendshipIndexPairs(indexUpperBound, probability) {
-   const LIST = []
-   for (let i=0; i<indexUpperBound; i++) {
-      for (let j=i+1; j<indexUpperBound; j++) {
-         if (Math.random()<probability) LIST.push([i,j])
-      }
-   }
-   return LIST
-}
-
-const HUMAN = new Species('human', 'Bla!', 2, 2)
-const CAT = new Species('cat', 'Meow!', 4)
-const DOG = new Species('dog', 'Woof!', 4)
-const CATWOMAN = new Species('cat-woman', 'Bla!', 2, 2)
-const NAMES = [
-   {
-      species: HUMAN,
+const being = {species: undefined, name: undefined, gender: undefined, legs: undefined, hands: undefined, saying: undefined}
+const human = Object.assign({}, being, {species: 'human', legs: 2, hands: 2, saying: 'Bla!'})
+const cat_woman = Object.assign({}, human, {species: 'cat-woman', saying: 'Meow'})
+const pet = Object.assign({}, being, {legs: 4, hands: 0})
+const dog = Object.assign({}, pet, {species: 'dog', saying: 'Woof!'})
+const cat = Object.assign({}, pet, {species: 'cat', saying: 'Meow'})
+const species = {human: human, dog: dog, cat: cat, cat_woman: cat_woman}
+const names = {
+   human: {
       male: ['Liam', 'Noah', 'Oliver', 'William', 'Elijah', 'James', 'Benjamin', 'Lucas', 'Mason', 'Ethan'],
       female: ['Olivia', 'Emma', 'Ava', 'Sophia', 'Isabella', 'Charlotte', 'Amelia', 'Mia', 'Evelyn', 'Abigail']
    },
-   {
-      species: DOG,
+   dog: {
       male: ['Charlie', 'Max', 'Buddy', 'Oscar', 'Milo', 'Archie', 'Ollie', 'Toby', 'Jack', 'Teddy'],
       female: ['Bella', 'Molly', 'Coco', 'Ruby', 'Lucy', 'Bailey', 'Daisy', 'Rosie', 'Lola', 'Frankie']
    },
-   {
-      species: CAT,
+   cat: {
       male: ['Oliver', 'Leo', 'Milo', 'Charlie', 'Max', 'Jack', 'Simba', 'Loki', 'Oscar', 'Jasper'],
       female: ['Luna', 'Bella', 'Lily', 'Lucy', 'Kitty', 'Callie', 'Nala', 'Zoe', 'Chloe', 'Sophie']
    },
-   {
-      species: CATWOMAN,
-      male: [],
+   cat_woman: {
       female: ['Daisy', 'Stella', 'Cleo']
    }
-]
-const FRIENDSHIP_PROBABILITY = 0.05
-const INHABITANS = []
-
-// ======== INSTANTIATE THE WORLD ========
-Object.defineProperty(CATWOMAN, 'sound', {get: () => CAT.sound})
-NAMES.forEach(data =>
-   ['male','female'].forEach(gender =>
-      data[gender].forEach(name =>
-         INHABITANS.push(new Individum(name, gender, data.species)))))
-friendshipIndexPairs(INHABITANS.length, FRIENDSHIP_PROBABILITY).forEach(pair =>
-   Individum.becomeFriends(INHABITANS[pair[0]],INHABITANS[pair[1]]))
+}
+function inhabitWorld(species, names) {
+   let inhabitans = []
+   for (let kind in names) {
+      for (let gender in names[kind]) {
+         inhabitans.push(...names[kind][gender].map(name => Object.assign({},species[kind],{gender: gender, name: name})))
+      }
+   }
+   return inhabitans
+}
+function learnToTalk(inhabitans) {
+   inhabitans.forEach((obj, index, arr) => {
+      if (obj.species==='human') Object.defineProperty(arr[index], 'saying', {get: () => `Hi! I'm ${obj.name}`})
+      if (obj.species==='cat-woman') Object.defineProperty(arr[index], 'saying', {get: () => cat.saying})
+   })
+}
+function makeFriends(inhabitans, maxFriends) {
+   inhabitans.forEach((obj, index, arr) => {
+      const myFriendsSet = new Set()
+      const myFriendsNumber = Math.floor(Math.random()*Math.min(maxFriends, arr.length))
+      while (myFriendsSet.size < myFriendsNumber) {
+         let nextFriend = arr[Math.floor(Math.random()*(arr.length-1))]
+         if (obj !== nextFriend) {
+            myFriendsSet.add(nextFriend)
+         }
+      }
+      arr[index].friends=myFriendsSet
+   })
+}
+const inhabitans = inhabitWorld(species, names)
+learnToTalk(inhabitans)
+makeFriends(inhabitans, 5)
+cat.saying='Catch me! Meow!'
 
 // ======== OUTPUT ========
 /* Use print(message) for output.
@@ -102,6 +82,6 @@ friendshipIndexPairs(INHABITANS.length, FRIENDSHIP_PROBABILITY).forEach(pair =>
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
-
-INHABITANS.forEach(i =>
-   print(`<hr>${i.greeting}<br>Profile: ${i.profile}<br>Friends: ${i.friendsList}`, 'div'))
+inhabitans.forEach((being) => {
+   print(`${Object.values(being).slice(0,-1).join('; ')}; ${Array.from(being.friends).map(friend => friend.name).join(', ')}`,'div')
+})
