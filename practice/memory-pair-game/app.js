@@ -37,6 +37,9 @@ class Deck {
         let currentDealImages = shuffleArray(this.imagesArray).slice(0, this.cardsQuantityInDeal / 2)
         currentDealImages = shuffleArray(currentDealImages.concat(currentDealImages))
         this.currentDealCards = currentDealImages.map((image, index) => new Card(image, index))
+        this.opened = []
+        this.matched_quantity = 0
+        this.flip_count = 0
     }
     placeOnBoard(board) {
         //board is div element for appending child card elements
