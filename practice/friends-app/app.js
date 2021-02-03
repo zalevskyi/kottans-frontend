@@ -7,7 +7,7 @@ const REQUEST_PARAMETERS = {order: 'ascending'}
 let connectionAttemps = 1
 
 function connectToServer() {
-  RESULTS.innerHTML = `<div>Please wait. Connecting to server. Attemp: ${connectionAttemps}</div>`
+  RESULTS.innerHTML = `<div class='connection_message'>Please wait. Connecting to server. Attemp: ${connectionAttemps}</div>`
   connectionAttemps++
   fetchUserData(showResults, connectToServer)
 }
